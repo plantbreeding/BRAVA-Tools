@@ -7,7 +7,7 @@ services:
       - backend
 
   backend:
-    image: brapicoordinatorselby/brapi-tools-be:latest
+    image: brapicoordinatorselby/brava-tools-be:latest
     container_name: backend
     environment:
       - SPRING_PROFILES_ACTIVE=prod
