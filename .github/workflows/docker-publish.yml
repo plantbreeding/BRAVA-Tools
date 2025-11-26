@@ -12,26 +12,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-
       - name: Build backend
         run: |
           ./gradlew bootJar -x test
-
-      - name: Inspect built jar
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Listing all files recursively:"
-          ls -R
-          echo "Listing build/libs specifically:"
-          ls -l build/libs
-          echo "Contents of the jar (first 20 lines):"
-          jar -tf build/libs/*.jar | head -n 20
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2

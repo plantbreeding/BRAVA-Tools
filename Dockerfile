@@ -6,4 +6,4 @@ COPY build/libs/BRAVA.jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-cp", "/app/BRAVA.jar", "org.springframework.boot.loader.JarLauncher"]
