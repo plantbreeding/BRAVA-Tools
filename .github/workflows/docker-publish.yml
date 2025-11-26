@@ -26,5 +26,5 @@ jobs:
 
       - name: Build & Push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/brava-tools-be:latest .
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/brava-tools-be:latest
+          docker build -t ${{ secrets.DOCKERHUB_USER }}/brava-tools-be:latest .
+          docker push ${{ secrets.DOCKERHUB_USER }}/brava-tools-be:latest
