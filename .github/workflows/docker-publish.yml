@@ -27,8 +27,7 @@ jobs:
       - name: Build backend Docker image
         run: |
           docker build \
-            -t ${{ secrets.DOCKERHUB_USER }}/brava-tools-be:latest \
-            ./backend
+            -t ${{ secrets.DOCKERHUB_USER }}/brava-tools-be:latest
 
       - name: Push backend image to Docker Hub
         run: |
