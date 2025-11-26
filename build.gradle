@@ -19,7 +19,7 @@ repositories {
 }
 
 ext {
-    usecaseinatorVersion = '1.0.2'
+    usecaseinatorVersion = '1.0.3'
 }
 
 dependencies {
@@ -32,6 +32,11 @@ dependencies {
 }
 
 jar {
+    manifest {
+        attributes(
+                'Main-Class': ''  // <-- replace with your main class
+        )
+    }
     archiveFileName = "BRAVA.jar"
 }
 

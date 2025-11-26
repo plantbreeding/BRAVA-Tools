@@ -1,0 +1,17 @@
+services:
+  frontend:
+    image: brava-tools-fe
+    ports:
+      - "8081:80"          # FE accessible at http://localhost:8081
+    environment:
+      FRONTEND_HOST: http://brava.localtest
+    depends_on:
+      - backend
+
+  backend:
+    image: brava-tools-be
+    container_name: backend
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    ports:
+      - "8080:8080"        # BE accessible at http://localhost:8080
