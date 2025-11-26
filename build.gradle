@@ -4,8 +4,8 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.6'
 }
 
-group = 'org.example'
-version = '1.0-SNAPSHOT'
+group = 'org.bravatools'
+version = '1.0.0-SNAPSHOT'
 
 java {
     toolchain {
@@ -31,6 +31,11 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:1.18.34"
 }
 
+jar {
+    enabled = false
+}
+
 bootJar {
     archiveFileName = "BRAVA.jar"
+    mainClass = 'org.bravatools.BravaToolsBackend'
 }
