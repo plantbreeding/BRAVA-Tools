@@ -1,15 +1,15 @@
 services:
   frontend:
-    image: brapicoordinatorselby/brava-tools-fe:latest
+    image: brava-tools-fe
     ports:
       - "8081:80"
     depends_on:
       - backend
 
   backend:
-    image: brapicoordinatorselby/brapi-tools-be:latest
+    image: brava-tools-be
     container_name: backend
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_PROFILES_ACTIVE=development
     ports:
       - "8080:8080"
