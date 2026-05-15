@@ -19,11 +19,12 @@ repositories {
 }
 
 ext {
-    usecaseinatorVersion = '1.0.3'
+    usecaseinatorVersion = '1.0.4'
 }
 
 dependencies {
     implementation "org.brapi:use-caseinator:${usecaseinatorVersion}"
+    implementation "org.brapi.brapi-schema-tools:brapi-schema-tools-analyse:0.68.0-SNAPSHOT"
 
     implementation "org.springframework.boot:spring-boot-starter-web"
 
