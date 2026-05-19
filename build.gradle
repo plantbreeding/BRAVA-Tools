@@ -24,7 +24,7 @@ ext {
 
 dependencies {
     implementation "org.brapi:use-caseinator:${usecaseinatorVersion}"
-    implementation "org.brapi.brapi-schema-tools:brapi-schema-tools-analyse:0.68.0-SNAPSHOT"
+    implementation "org.brapi.brapi-schema-tools:brapi-schema-tools-analyse:0.68.0"
 
     implementation 'com.atlassian.oai:swagger-request-validator-core:2.44.1'
     implementation "org.springframework.boot:spring-boot-starter-web"
